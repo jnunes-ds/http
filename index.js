@@ -30,6 +30,11 @@ function handleRequest(req, res){
     let path = url.parse(req.url).pathname;
     path = path === ('' || '/') ? '/index.html' : path;
 
+    let method = req.method;
+    if(method == 'PUT'){
+        res.writeHead(404, { 'contentType': 'text/html;charset=utf-8' });
+    }
+
     if(path === '/test'){
         res.end("Test");
         return true;

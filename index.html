@@ -8,5 +8,50 @@
 </head>
 <body>
     <h1>Index</h1>
+
+    <button onclick="get()">Get</button>
+    <button onclick="post()">Post</button>
+    <button onclick="put()">Put</button>
+    <button onclick="del()">Delete</button>
+
+    <script>
+        const url = 'http://localhost:3000/test'
+        function get(){
+            fetch(url, {
+                method: "GET"
+            }).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+        function post(){
+            fetch(url, {
+                method: "POST"
+            }).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+        function put(){
+            fetch(url, {
+                method: "PUT"
+            }).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+        function del(){
+            fetch(url, {
+                method: "DELETE"
+            }).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+    </script>
 </body>
 </html>
