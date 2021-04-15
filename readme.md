@@ -1,4 +1,4 @@
 #HTTP
 
->>> A little Node Project for study http requisition
+>>> A small Node Project to study http requests.
 
